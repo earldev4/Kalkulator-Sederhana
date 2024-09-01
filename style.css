@@ -26,8 +26,14 @@ body{
 .calculatorGrid > button:hover{
     background-color: rgb(255, 255, 255, 0.9);
 }
+.calculatorGrid button:nth-child(17){
+    border-radius: 0px 0px 0px 5px;
+}
 .spanTwo{
     grid-column: span 2;
+}
+.spanTwo:last-child{
+    border-radius: 0px 0px 5px 0px;
 }
 .output{
     grid-column: 1 / -1;
@@ -39,4 +45,13 @@ body{
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    border-radius: 5px 5px 0px 0px;
+}
+.output .previousOperand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+.output .currentOperand{
+    color: white;
+    font-size: 2.5rem;
 }
