@@ -26,7 +26,29 @@ class Calculator{
         this.currentOperand = ''
     }
     calculate(){
-
+        let result
+        const prev = parseFloat(this.previousOperand)
+        const curr = parseFloat(this.currentOperand)
+        if (isNaN(prev) || isNaN(curr)) return
+        switch (this.operation){
+            case "+":
+                result = prev + curr
+                break
+            case "-":
+                result = prev - curr
+                break
+            case "*":
+                result = prev * curr
+                break
+            case "/":
+                result = prev / curr
+                break
+            default:
+                return
+        }
+        this.currentOperand = result
+        this.operation = undefined
+        this.previousOperand = ''
     }
     updateDisplay(){
         this.currentOperandTextElement.innerText = this.currentOperand
