@@ -82,3 +82,7 @@ equalButton.addEventListener("click",()=>{
     calculator.calculate()
     calculator.updateDisplay()
 })
+allClearButton.addEventListener("click",()=>{
+    calculator.clear()
+    calculator.updateDisplay()
+})
