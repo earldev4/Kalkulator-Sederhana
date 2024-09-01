@@ -56,3 +56,7 @@ operationButtons.forEach(button=>{
         calculator.updateDisplay()
     })
 })
+equalButton.addEventListener("click",()=>{
+    calculator.calculate()
+    calculator.updateDisplay()
+})
